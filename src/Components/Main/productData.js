@@ -1,30 +1,69 @@
-
 const products = [
-    {header: 'This is an inspiring little house',
-     innerText: 'Have you ever seen a better looking house? I will wait for your reply',
-     altText: 'Just a spiffy looking house',
-     src: `https://image.shutterstock.com/image-vector/illustration-simple-house-isolated-on-260nw-1937900650.jpg`,
-     category: 'home',
-     id: 'dwqdqwdq',
-     cool:'very', },
+  {
+    header: "This is an inspiring little house",
+    innerText: "Have you ever seen a better looking house?",
+    altText: "Just a spiffy looking house",
+    src: `https://us.123rf.com/450wm/supirloko89/supirloko892003/supirloko89200300033/143255847-moveable-tiny-house-simple-flat-illustration.jpg?ver=6`,
+    area: 234,
+    category: "home",
+    id: "dwqdqwdq",
+    cool: "very",
+  },
 
-     {header: 'This is an inspiring big house',
-     innerText: 'Have you ever seen a better looking house? I will wait for your reply',
-     altText: 'Just a spiffy looking house',
-     src: 'https://image.shutterstock.com/image-vector/illustration-simple-house-isolated-on-260nw-1937900650.jpg',
-     category: 'big home',
-     id: 'ghghghghghgh',
-     cool:'very', },
-     
-     {header: 'This is an inspiring big house',
-     innerText: 'Have you ever seen a better looking house? I will wait for your reply',
-     altText: 'Just a spiffy looking house',
-     src: 'https://image.shutterstock.com/image-vector/illustration-simple-house-isolated-on-260nw-1937900650.jpg',
-     category: 'small home',
-     id: 'pfllfewlfowefw',
-     cool:'very', }
+  {
+    header: "This is an inspiring big house",
+    innerText: "Have you ever seen a better looking house?",
+    altText: "Just a spiffy looking house",
+    src: "https://us.123rf.com/450wm/supirloko89/supirloko892003/supirloko89200300033/143255847-moveable-tiny-house-simple-flat-illustration.jpg?ver=6",
+    area: 300,
+    category: "big home",
+    id: "ghghghghghgh",
+    cool: "very",
+  },
 
+  {
+    header: "This is an inspiring big house",
+    innerText: "Have you ever seen a better looking house?",
+    altText: "Just a spiffy looking house",
+    src: "https://us.123rf.com/450wm/supirloko89/supirloko892003/supirloko89200300033/143255847-moveable-tiny-house-simple-flat-illustration.jpg?ver=6",
+    area: 500,
+    category: "small home",
+    id: "pfllfewlfowefw",
+    cool: "very",
+  },
 
-]
+  {
+    header: "This is an inspiring big house",
+    innerText: "Have you ever seen a better looking house?",
+    altText: "Just a spiffy looking house",
+    src: "https://us.123rf.com/450wm/supirloko89/supirloko892003/supirloko89200300033/143255847-moveable-tiny-house-simple-flat-illustration.jpg?ver=6",
+    area: 600,
+    category: "steep home",
+    id: "pfllfewlfowqdqwdwqaaaaa",
+    cool: "very",
+  },
+
+  {
+    header: "This is an inspiring big house",
+    innerText: "Have you ever seen a better looking house?",
+    altText: "Just a spiffy looking house",
+    src: "https://us.123rf.com/450wm/supirloko89/supirloko892003/supirloko89200300033/143255847-moveable-tiny-house-simple-flat-illustration.jpg?ver=6",
+    area: 100,
+    category: "small home",
+    id: "1212fssfffw",
+    cool: "very",
+  },
+
+  {
+    header: "This is an inspiring big house",
+    innerText: "Have you ever seen a better looking house?",
+    altText: "Just a spiffy looking house",
+    src: "https://us.123rf.com/450wm/supirloko89/supirloko892003/supirloko89200300033/143255847-moveable-tiny-house-simple-flat-illustration.jpg?ver=6",
+    area: 2,
+    category: "small home",
+    id: "zzzzfffggggeee",
+    cool: "very",
+  },
+];
 
 export default products;

@@ -7,7 +7,7 @@ const products = [
     area: 234,
     category: "home",
     id: "dwqdqwdq",
-    cool: "very",
+    price: "20.000",
   },
 
   {
@@ -18,7 +18,7 @@ const products = [
     area: 300,
     category: "big home",
     id: "ghghghghghgh",
-    cool: "very",
+    price: "35.000",
   },
 
   {
@@ -29,7 +29,7 @@ const products = [
     area: 500,
     category: "small home",
     id: "pfllfewlfowefw",
-    cool: "very",
+    price: "65.000",
   },
 
   {
@@ -40,7 +40,7 @@ const products = [
     area: 600,
     category: "steep home",
     id: "pfllfewlfowqdqwdwqaaaaa",
-    cool: "very",
+    price: "10.000",
   },
 
   {
@@ -51,7 +51,7 @@ const products = [
     area: 100,
     category: "small home",
     id: "1212fssfffw",
-    cool: "very",
+    price: "5.000",
   },
 
   {
@@ -62,7 +62,7 @@ const products = [
     area: 2,
     category: "small home",
     id: "zzzzfffggggeee",
-    cool: "very",
+    price: "10.000",
   },
 ];
 

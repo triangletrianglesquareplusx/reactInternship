@@ -25,11 +25,11 @@ export default class CatalogueSection extends Component {
     }));
   };
 
-  work = (event) => {
+  /*work = (event) => {
     this.setState({
       location: event.target.value,
     });
-  };
+  };*/
 
   render() {
     const { location, cardInfo } = this.state;
@@ -45,9 +45,14 @@ export default class CatalogueSection extends Component {
         <div className="flex flex-col items-center justify-center md:flex-row md:flex-wrap m-2">
           {cardInfo.map((itemOfData) => (
             <ProductCard
-              key={itemOfData.id}
+              header={itemOfData.header}
+              innerText={itemOfData.innerText}
+              src={itemOfData.src}
+              altText={itemOfData.altText}
               category={itemOfData.category}
+              price={itemOfData.price}
               area={itemOfData.area}
+              key={itemOfData.id}
             />
           ))}
         </div>

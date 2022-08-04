@@ -7,6 +7,7 @@ export default class ProductCard extends Component {
     altText: this.props.altText,
     src: this.props.src,
     area: this.props.area,
+    price: this.props.price,
     category: this.props.category,
     id: this.props.id,
     count: 0,
@@ -26,9 +27,17 @@ export default class ProductCard extends Component {
   };
 
   render() {
-    const { header, innerText, altText, src, area, category, isFullCard } =
-      this.state;
-    console.log(header, innerText, altText, src, area, category, isFullCard);
+    const {
+      header,
+      innerText,
+      altText,
+      src,
+      area,
+      price,
+      category,
+      isFullCard,
+    } = this.state;
+
     return (
       <div className="p-5 m-2 flex flex-col rounded-md shadow-lg w-1/2 md:w-1/4">
         <h2 className="text-center font-bold">{header}</h2>
@@ -38,12 +47,19 @@ export default class ProductCard extends Component {
             {isFullCard === true ? (
               <>
                 <p className="text-center">{innerText}</p>
-                <p className="text-center font-bold">Category: {category}</p>
+                <p className="text-center font-bold">${price}</p>
+                <div className="flex flex-col items-center md:flex-row md:justify-center gap-1">
+                  <p className="text-center font-bold">
+                    Category: <span className="font-normal">{category}</span>
+                  </p>
+                  <p className="text-center font-bold">
+                    Area: <span className="font-normal">{area} m2</span>
+                  </p>
+                </div>
               </>
             ) : (
               <>
                 <p>No ratings yet</p>
-                <p>{area}</p>
               </>
             )}
           </div>

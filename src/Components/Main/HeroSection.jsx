@@ -9,6 +9,7 @@ export default class HeroSection extends Component {
   state = {
     step: 3,
     cards: productData,
+    className: `text-simpleWhite bg-regalBlue rounded-md shadow-md overflow-hidden`,
   };
 
   printCards = (arr, step) => {
@@ -24,6 +25,8 @@ export default class HeroSection extends Component {
           src={itemOfData.src}
           altText={itemOfData.altText}
           category={itemOfData.category}
+          price={itemOfData.price}
+          area={itemOfData.area}
           key={itemOfData.id}
         />
       );
@@ -37,7 +40,7 @@ export default class HeroSection extends Component {
   };
 
   render() {
-    const { cards, step } = this.state;
+    const { cards, step, className } = this.state;
     return (
       <>
         <div className="flex justify-center m-2">
@@ -50,7 +53,7 @@ export default class HeroSection extends Component {
         </div>
         <div className="flex justify-center m-2">
           <ControlButton
-            className={`text-simpleWhite bg-regalBlue rounded-md`}
+            className={className}
             name="View More"
             clicker={this.updateNumberOfCards}
           />

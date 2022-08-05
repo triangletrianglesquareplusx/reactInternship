@@ -1,7 +1,7 @@
 //import React from 'react'
 import { Component } from "react";
 import { Link } from "react-router-dom";
-import ControlButton from "../ControlButton/ControlButton";
+import ControlButton from "../../Utilities/ControlButton";
 
 export default class Header extends Component {
   render() {

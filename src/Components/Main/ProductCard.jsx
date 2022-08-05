@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ControlButton from "../Header/ControlButton/ControlButton";
+import ControlButton from "../../Utilities/ControlButton";
 export default class ProductCard extends Component {
   state = {
     header: this.props.header,

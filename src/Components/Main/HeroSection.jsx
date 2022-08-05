@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import HeroElement from "./HeroElement";
 import productData from "./productData.js";
 import ProductCard from "./ProductCard";
-import ControlButton from "../Header/ControlButton/ControlButton";
+import ControlButton from "../../Utilities/ControlButton";
 
 export default class HeroSection extends Component {
   state = {

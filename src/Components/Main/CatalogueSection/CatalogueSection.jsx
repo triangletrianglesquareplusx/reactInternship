@@ -1,62 +1,97 @@
-import React, { Component } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import SearchBar from "./SearchBar";
-import productData from "../productData.js";
-import ProductCard from "../ProductCard";
-export default class CatalogueSection extends Component {
-  state = {
-    location: this.props.location,
-    changeHandler: this.props.changeHandler,
-    submitHandler: this.props.submitHandler,
-    cardInfo: productData,
-  };
+import ProductCard from "../../../Utilities/ProductCard";
 
+const CatalogueSection = () => {
+  const [filter, setFilter] = useState("");
+  const [categories, setCategories] = useState([]);
   /*state = {
+    categories: [],
+    filteredResults: [],
     cardInfo: productData,
-    value: "hey",
+    inputQuery: "",
+    selectQuery: "",
   };*/
 
-  filterCards = (event) => {
+  /*useEffect(() => {
+    setCategories([...new Set(products.slice().map((card) => card.category))]);
+  }, [products]);*/
+
+  /*filterCards = (event) => {
     event.preventDefault();
-    console.log(event.target.value);
+    console.log(this.state.selectQuery, this.state.inputQuery);
     this.setState((prevState) => ({
-      cardInfo: prevState.cardInfo
-        .slice()
-        .sort((cardA, cardB) => cardA.area - cardB.area),
+      filteredResults: prevState.cardInfo.slice().filter((card) => {
+        const re = new RegExp(this.state.inputQuery, "i");
+        return (
+          card.category === this.state.selectQuery &&
+          Object.values(card).some((val) => re.test(val))
+        );
+      }),
     }));
+  };*/
+
+  /*updateSelectQuery = (event) => {
+    this.setState({
+      selectQuery: event.target.value,
+    });
   };
 
-  /*work = (event) => {
+  updateInputQuery = (event) => {
     this.setState({
-      location: event.target.value,
+      inputQuery: event.target.value,
     });
   };*/
 
-  render() {
-    const { location, cardInfo } = this.state;
-
-    return (
-      <div className="flex flex-col justify-center items-center m-2 p-5">
-        <SearchBar
-          location={location}
-          submitHandler={this.filterCards}
-          changeHandler={this.work}
-          categories={[...new Set(cardInfo.map((card) => card.category))]}
-        />
-        <div className="flex flex-col items-center justify-center md:flex-row md:flex-wrap m-2">
-          {cardInfo.map((itemOfData) => (
-            <ProductCard
-              header={itemOfData.header}
-              innerText={itemOfData.innerText}
-              src={itemOfData.src}
-              altText={itemOfData.altText}
-              category={itemOfData.category}
-              price={itemOfData.price}
-              area={itemOfData.area}
-              key={itemOfData.id}
-            />
-          ))}
-        </div>
+  return (
+    <div className="flex flex-col items-center justify-center p-5 m-2">
+      <SearchBar
+        /*submitHandler={this.filterCards}
+        inputHandler={this.updateInputQuery}
+        selectHandler={this.updateSelectQuery}*/
+        categories={categories}
+      />
+      <div className="flex flex-col items-center justify-center m-2 md:flex-row md:flex-wrap">
+        {/*filteredResults.length === 0
+          ? cardInfo.map((itemOfData) => (
+              <ProductCard
+                header={itemOfData.header}
+                innerText={itemOfData.innerText}
+                src={itemOfData.src}
+                altText={itemOfData.altText}
+                category={itemOfData.category}
+                price={itemOfData.price}
+                area={itemOfData.area}
+                key={itemOfData.id}
+              />
+            ))
+          : filteredResults.map((itemOfData) => (
+              <ProductCard
+                header={itemOfData.header}
+                innerText={itemOfData.innerText}
+                src={itemOfData.src}
+                altText={itemOfData.altText}
+                category={itemOfData.category}
+                price={itemOfData.price}
+                area={itemOfData.area}
+                key={itemOfData.id}
+              />
+            ))*/}
+        {/*products.map((itemOfData) => (
+          <ProductCard
+            header={itemOfData.header}
+            innerText={itemOfData.innerText}
+            src={itemOfData.src}
+            altText={itemOfData.altText}
+            category={itemOfData.category}
+            price={itemOfData.price}
+            area={itemOfData.area}
+            key={itemOfData.id}
+          />
+        ))*/}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+export default CatalogueSection;

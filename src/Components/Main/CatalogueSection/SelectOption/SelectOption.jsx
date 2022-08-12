@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class SelectOption extends Component {
-  render() {
-    return <option>{this.props.name}</option>;
-  }
-}
+const SelectOption = ({ name }) => {
+  return <option>{name}</option>;
+};
+
+export default SelectOption;
